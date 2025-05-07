@@ -9,7 +9,8 @@ export const initAnimateOnScroll = () => {
         // Add staggered animation delay based on index if elements are in a group
         const index = Array.from(entry.target.parentElement?.children || []).indexOf(entry.target);
         if (index > 0) {
-          entry.target.style.transitionDelay = `${index * 0.1}s`;
+          // Cast to HTMLElement to access style property
+          (entry.target as HTMLElement).style.transitionDelay = `${index * 0.1}s`;
         }
       } else {
         // Optional: remove the class when element is out of view for re-animation
