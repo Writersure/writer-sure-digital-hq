@@ -9,7 +9,7 @@ const testimonials = [
     name: "Alyze Sam",
     position: "Survivor, Serial Co-Founder, Multi Award-Winning Author",
     company: "Serving the Blockchain Community",
-    image: "/lovable-uploads/8bc155d6-036c-48e6-8698-9194fecb9bd7.png",
+    image: "/lovable-uploads/37e28530-96db-470c-8204-de0bb0c4ef81.png",
     quote: "I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill. His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do. Alex's empathy and communication skills made launches seamless and enjoyable. I wholeheartedly recommend him.",
     rating: 5
   }
