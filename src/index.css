@@ -115,4 +115,31 @@
   .animate-on-scroll.shown {
     @apply opacity-100 translate-y-0;
   }
+  
+  /* Staggered animations for groups */
+  .animate-stagger > * {
+    @apply opacity-0;
+    animation: fade-in-up 0.5s ease-out forwards;
+    animation-delay: calc(var(--delay) * 100ms);
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
 }
