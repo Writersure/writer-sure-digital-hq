@@ -8,13 +8,6 @@ const Hero = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
-            <div className="flex items-center justify-center md:justify-start mb-6">
-              <img 
-                src="/lovable-uploads/36405161-d311-4910-b01c-3f667df01147.png" 
-                alt="WriterSure Logo" 
-                className="h-28 md:h-32"
-              />
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Premium AI-Powered <span className="text-gradient">Content Creation</span> & Digital Services
             </h1>

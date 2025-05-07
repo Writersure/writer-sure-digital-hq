@@ -8,7 +8,7 @@ const servicesList = [
     title: "Premium Ghostwriting",
     description: "Expert content creation that captures your authentic voice while maintaining the highest writing standards.",
     features: ["SEO-optimized", "Brand voice matching", "Unlimited revisions"],
-    icon: "✍️",
+    icon: "📝",
   },
   {
     id: 2,
@@ -33,34 +33,41 @@ const servicesList = [
   },
   {
     id: 5,
+    title: "Coding Services",
+    description: "Technical development solutions from basic scripts to advanced application features.",
+    features: ["Web development", "Automation scripts", "API integration"],
+    icon: "💻",
+  },
+  {
+    id: 6,
     title: "Technical Writing",
     description: "Clear, accurate documentation that explains complex concepts in accessible language.",
     features: ["API documentation", "User manuals", "Process guides"],
     icon: "📘",
   },
   {
-    id: 6,
+    id: 7,
     title: "Freelance Writing",
     description: "High-quality content creation for blogs, articles, whitepapers, and more.",
     features: ["SEO-optimized", "Research-backed", "Engaging style"],
-    icon: "📝",
+    icon: "✍️",
   },
   {
-    id: 7,
+    id: 8,
     title: "Website Design",
     description: "Beautiful, functional websites that convert visitors into customers.",
     features: ["Responsive design", "SEO foundation", "User experience focus"],
     icon: "🎨",
   },
   {
-    id: 8,
+    id: 9,
     title: "AI Generalist Solutions",
     description: "Custom AI applications and integrations to solve your unique business challenges.",
     features: ["Business analysis", "Custom solutions", "Integration support"],
     icon: "🧠",
   },
   {
-    id: 9,
+    id: 10,
     title: "Social Media Marketing",
     description: "Strategic content and community management across all major social platforms.",
     features: ["Content calendar", "Engagement strategy", "Performance tracking"],
@@ -72,7 +79,7 @@ const Services = () => {
   return (
     <section id="services" className="bg-white">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Comprehensive AI-Powered <span className="text-gradient">Digital Services</span>
           </h2>
@@ -84,7 +91,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesList.map((service) => (
-            <div key={service.id} className="service-card flex flex-col animate-on-scroll">
+            <div key={service.id} className="service-card flex flex-col">
               <div className="text-3xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-bold mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
@@ -106,7 +113,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center animate-on-scroll">
+        <div className="mt-16 text-center">
           <p className="text-lg mb-6">
             Not sure which service is right for you? Let's discuss your specific needs.
           </p>

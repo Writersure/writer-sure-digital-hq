@@ -5,11 +5,11 @@ import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Alyze Sam",
-    position: "Serial Co-Founder & Author",
-    company: "TechAndAuthors.com",
-    image: "/lovable-uploads/b6c87966-f2fb-4118-96b4-fd9db0e4e879.png",
-    quote: "I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill. His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do.",
+    name: "Sarah Johnson",
+    position: "Marketing Director",
+    company: "TechGrowth Inc.",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    quote: "WriterSure transformed our content strategy. Their ghostwriting services helped us produce consistent, high-quality blog posts that increased our organic traffic by 156% in just four months.",
     rating: 5
   },
   {
@@ -55,7 +55,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="bg-brand-800 text-white py-20">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             What Our <span className="bg-gradient-to-r from-white to-teal-300 bg-clip-text text-transparent">Clients Say</span>
           </h2>
@@ -65,7 +65,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto animate-on-scroll">
+        <div className="relative max-w-4xl mx-auto">
           <div className="relative bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12">
             <div className="mb-8">
               <div className="flex gap-1 mb-4">
@@ -119,14 +119,6 @@ const Testimonials = () => {
               aria-label={`Go to testimonial ${index + 1}`}
             />
           ))}
-        </div>
-
-        <div className="mt-12 text-center animate-on-scroll">
-          <img 
-            src="/lovable-uploads/56e1547c-0b2b-4115-a00b-f3a5968c6b7c.png" 
-            alt="Email testimonial from Alyze Sam" 
-            className="max-w-full md:max-w-3xl mx-auto rounded-lg shadow-xl hidden md:block" 
-          />
         </div>
       </div>
     </section>
