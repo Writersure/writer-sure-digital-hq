@@ -8,32 +8,32 @@
 @layer base {
   :root {
     --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 291 30% 20%; /* Dark Purple for text */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 291 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 291 30% 20%;
 
-    --primary: 221 83% 23%;
+    --primary: 291 64% 40%; /* Purple */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 291 30% 20%;
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 338 76% 30%; /* Maroon/Wine for subtext */
 
-    --accent: 173 92% 32%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 16 100% 54%; /* Coral/Red-Orange */
+    --accent-foreground: 291 30% 20%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%; /* Red */
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 23%;
+    --ring: 291 64% 40%; /* Purple */
 
     --radius: 0.5rem;
   }
@@ -93,7 +93,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-800 to-teal-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-800 to-orange-500 bg-clip-text text-transparent;
   }
 
   .btn-primary {

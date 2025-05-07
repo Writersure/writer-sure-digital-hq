@@ -23,7 +23,7 @@ const Testimonials = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            What Our <span className="bg-gradient-to-r from-white to-teal-300 bg-clip-text text-transparent">Clients Say</span>
+            What Our <span className="bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">Clients Say</span>
           </h2>
           <p className="text-lg text-gray-300">
             Don't take our word for it – hear from the professionals we've helped transform
@@ -36,7 +36,7 @@ const Testimonials = () => {
             <div className="mb-8">
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="h-5 w-5 fill-orange-500 text-orange-500" />
                 ))}
               </div>
               <p className="text-lg md:text-xl italic mb-8">"{testimonials[activeIndex].quote}"</p>

@@ -65,19 +65,25 @@ export default {
 				},
 				// Custom brand colors
 				brand: {
-					50: '#f0f9ff',
-					100: '#e0f2fe',
-					200: '#bae6fd',
-					300: '#7dd3fc',
-					400: '#38bdf8',
-					500: '#0ea5e9',
-					600: '#0284c7',
-					700: '#0369a1',
-					800: '#1a365d', // Primary deep blue
-					900: '#0c4a6e',
+					50: '#F3E5F5',
+					100: '#E1BEE7',
+					200: '#CE93D8',
+					300: '#BA68C8',
+					400: '#AB47BC',
+					500: '#9C27B0',
+					600: '#8E24AA', // Purple
+					700: '#7B1FA2',
+					800: '#6A1B9A', // Dark Purple (Text)
+					900: '#880E4F', // Maroon/Wine (Subtext)
 				},
 				teal: {
-					500: '#0d9488', // Accent teal
+					500: '#FF7043', // Coral/Red-Orange
+				},
+				orange: {
+					500: '#FFA726', // Orange-Yellow
+				},
+				red: {
+					500: '#E53935', // Red
 				}
 			},
 			borderRadius: {
