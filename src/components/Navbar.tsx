@@ -56,7 +56,9 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <Button className="btn-primary">Contact Us</Button>
+          <Button className="btn-primary" asChild>
+            <a href="#contact">Contact Us</a>
+          </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -85,7 +87,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-primary w-full mt-4">Contact Us</Button>
+            <Button className="btn-primary w-full mt-4" asChild>
+              <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
+            </Button>
           </div>
         </div>
       )}

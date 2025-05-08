@@ -3,10 +3,26 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageSquare, Phone, Globe } from "lucide-react";
+import { Mail, MessageSquare, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
-const Contact = () => {
+const services = [
+  "Premium Ghostwriting",
+  "Virtual Assistance",
+  "Email Marketing",
+  "Chatbot Automation",
+  "Technical Writing",
+  "Social Media Marketing",
+  "Blog Post / Article",
+  "Ebook or Guide",
+  "Website Copy",
+  "LinkedIn Posts / Personal Branding",
+  "Newsletter Copy",
+  "Other / Not Sure",
+];
+
+const ContactForm = ({ onSuccess }) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -16,12 +32,12 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
@@ -31,6 +47,9 @@ const Contact = () => {
       title: "Message sent successfully!",
       description: "We'll get back to you within 24 hours.",
     });
+    
+    // Call success callback
+    if (onSuccess) onSuccess();
     
     // Reset form
     setFormData({
@@ -42,24 +61,114 @@ const Contact = () => {
     });
   };
 
-  const services = [
-    "Premium Ghostwriting",
-    "Virtual Assistance",
-    "Email Marketing",
-    "Chatbot Automation",
-    "Coding Services",
-    "Technical Writing",
-    "Freelance Writing",
-    "Website Design",
-    "AI Generalist Solutions",
-    "Social Media Marketing",
-    "Blog Post / Article",
-    "Ebook or Guide",
-    "Website Copy",
-    "LinkedIn Posts / Personal Branding",
-    "Newsletter Copy",
-    "Other / Not Sure",
-  ];
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            Full Name *
+          </label>
+          <Input
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full"
+            placeholder="John Doe"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            Email Address *
+          </label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full"
+            placeholder="john@example.com"
+          />
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+            Company Name
+          </label>
+          <Input
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full"
+            placeholder="Your Company"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+            Service You're Interested In *
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+            className="w-full p-2.5 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-800 focus:border-transparent"
+          >
+            <option value="" disabled>Select a service</option>
+            {services.map((service) => (
+              <option key={service} value={service}>
+                {service}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+          Your Message *
+        </label>
+        <Textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="w-full min-h-[150px]"
+          placeholder="Tell us about your project and specific requirements..."
+        />
+      </div>
+      
+      <div className="flex items-center">
+        <input
+          id="terms"
+          type="checkbox"
+          required
+          className="h-4 w-4 text-brand-800 focus:ring-brand-800 border-gray-300 rounded"
+        />
+        <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
+          I agree to the <a href="#" className="text-brand-800 hover:underline">Terms & Conditions</a> and <a href="#" className="text-brand-800 hover:underline">Privacy Policy</a>
+        </label>
+      </div>
+      
+      <Button type="submit" className="btn-primary w-full md:w-auto">
+        Send Message
+      </Button>
+    </form>
+  );
+};
+
+const Contact = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <section id="contact" className="bg-white py-20">
@@ -87,6 +196,13 @@ const Contact = () => {
               <Phone className="h-5 w-5 text-brand-800" />
               <span>+91 8297297307</span>
             </a>
+            <Button
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-brand-800 text-white hover:bg-brand-700 transition-colors"
+              onClick={() => setIsDialogOpen(true)}
+            >
+              <MessageSquare className="h-5 w-5" />
+              <span>Send Us a Message</span>
+            </Button>
           </div>
         </div>
 
@@ -122,35 +238,6 @@ const Contact = () => {
                     <p className="text-sm text-gray-300 mt-1">24/7 automated, business hours for live agents</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <Globe className="h-6 w-6 mr-4 mt-1 text-[#FFA726]" />
-                  <div>
-                    <h4 className="font-medium mb-1">Social Media</h4>
-                    <p>Connect with us online</p>
-                    <div className="flex gap-3 mt-2">
-                      <a href="#" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
-                        <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                          <rect x="2" y="9" width="4" height="12"></rect>
-                          <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                      </a>
-                      <a href="#" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
-                        <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                        </svg>
-                      </a>
-                      <a href="#" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
-                        <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
               
               <div className="bg-white/10 rounded-lg p-6">
@@ -166,114 +253,25 @@ const Contact = () => {
           </div>
           
           <div className="lg:w-3/5">
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
               <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Full Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Company Name
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full"
-                      placeholder="Your Company"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                      Service You're Interested In *
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-2.5 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-800 focus:border-transparent"
-                    >
-                      <option value="" disabled>Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full min-h-[150px]"
-                    placeholder="Tell us about your project and specific requirements..."
-                  />
-                </div>
-                
-                <div className="flex items-center">
-                  <input
-                    id="terms"
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 text-brand-800 focus:ring-brand-800 border-gray-300 rounded"
-                  />
-                  <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
-                    I agree to the <a href="#" className="text-brand-800 hover:underline">Terms & Conditions</a> and <a href="#" className="text-brand-800 hover:underline">Privacy Policy</a>
-                  </label>
-                </div>
-                
-                <Button type="submit" className="btn-primary w-full md:w-auto">
-                  Send Message
-                </Button>
-              </div>
-            </form>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Message Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">
+              Send Us a Message
+            </DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsDialogOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

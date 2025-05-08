@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,11 +17,15 @@ const Hero = () => {
               and AI solutions tailored to elevate your brand and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary flex items-center gap-2 text-base">
-                Get Started <ArrowRight className="h-5 w-5" />
+              <Button className="btn-primary flex items-center gap-2 text-base" asChild>
+                <a href="#contact">
+                  Get Started <ArrowRight className="h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="outline" className="btn-secondary text-base">
-                View Our Services
+              <Button variant="outline" className="btn-secondary text-base" asChild>
+                <a href="#services">
+                  View Our Services
+                </a>
               </Button>
             </div>
           </div>
@@ -48,8 +53,10 @@ const Hero = () => {
                   <span>Tailored to your unique brand voice</span>
                 </li>
               </ul>
-              <Button className="w-full bg-brand-800 hover:bg-brand-700 text-white">
-                Learn More
+              <Button className="w-full bg-brand-800 hover:bg-brand-700 text-white" asChild>
+                <a href="#services">
+                  Learn More
+                </a>
               </Button>
             </div>
             <div className="hidden md:block absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-brand-800/20 to-teal-500/20 rounded-full blur-3xl -z-10"></div>
@@ -63,6 +70,7 @@ const Hero = () => {
             <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
             <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
             <a href="https://www.coinresearch.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">COIN RESEARCH</a>
+            <a href="https://app.lifeprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LIFE PROTOCOL</a>
           </div>
         </div>
       </div>
