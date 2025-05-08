@@ -25,7 +25,7 @@ const Index = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content", 
-        "Transform your digital presence with WriterSure's premium AI-powered content creation, ghostwriting, technical writing, chatbots, and digital services. Expert solutions for businesses worldwide."
+        "Transform your digital presence with WriterSure's premium AI-powered content creation, ghostwriting, technical writing, and digital services. Expert solutions for businesses worldwide."
       );
     }
     
@@ -35,7 +35,7 @@ const Index = () => {
     // Add keywords meta tag
     const metaKeywords = document.createElement('meta');
     metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', 'AI content creation, ghostwriting, technical writing, email marketing, chatbot, virtual assistance, digital services, content strategy, SEO content, professional writing');
+    metaKeywords.setAttribute('content', 'AI content creation, ghostwriting, technical writing, email marketing, virtual assistance, digital services, content strategy, SEO content, professional writing, blog posts');
     head?.appendChild(metaKeywords);
     
     // Add canonical URL
@@ -82,7 +82,7 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main>
+      <main className="space-y-0">
         <Hero />
         <Services />
         <About />

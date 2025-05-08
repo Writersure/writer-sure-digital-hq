@@ -28,12 +28,13 @@ const Navbar = () => {
     { name: "Process", href: "#process" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-md py-3" : "bg-transparent py-5"
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container-custom flex items-center justify-between">
@@ -44,8 +45,8 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-10">
-          <div className="flex space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
+          <div className="flex space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -56,8 +57,8 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <Button className="btn-primary" asChild>
-            <a href="#contact">Contact Us</a>
+          <Button className="btn-primary">
+            <a href="#contact">Get Started</a>
           </Button>
         </div>
 
@@ -76,7 +77,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       {isOpen && (
         <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 px-4 animate-fade-in">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -87,8 +88,8 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-primary w-full mt-4" asChild>
-              <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
+            <Button className="btn-primary w-full mt-2" asChild>
+              <a href="#contact" onClick={() => setIsOpen(false)}>Get Started</a>
             </Button>
           </div>
         </div>
