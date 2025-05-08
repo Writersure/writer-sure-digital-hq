@@ -12,7 +12,7 @@ const Hero = () => {
               Premium AI-Powered <span className="text-gradient">Content Creation</span> & Digital Services
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 md:pr-10">
-              Transform your digital presence with expert ghostwriting, technical content, 
+              Transform your digital presence with expert ghostwriting, content creation, 
               and AI solutions tailored to elevate your brand and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -59,11 +59,10 @@ const Hero = () => {
         <div className="mt-20 flex flex-wrap justify-center gap-x-12 gap-y-8 text-center">
           <p className="text-gray-500 font-medium w-full mb-4">Trusted by innovative companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-            <div className="text-gray-400 font-semibold text-xl">COMPANY</div>
-            <div className="text-gray-400 font-semibold text-xl">BRAND INC</div>
-            <div className="text-gray-400 font-semibold text-xl">TECH GROUP</div>
-            <div className="text-gray-400 font-semibold text-xl">ENTERPRISE</div>
-            <div className="text-gray-400 font-semibold text-xl">STARTUP</div>
+            <a href="https://techandauthors.com/about-us/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">TECH AND AUTHORS</a>
+            <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
+            <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
+            <a href="https://www.coinresearch.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">COIN RESEARCH</a>
           </div>
         </div>
       </div>

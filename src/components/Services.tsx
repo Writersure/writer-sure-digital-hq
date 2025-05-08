@@ -42,14 +42,6 @@ const servicesList = [
     category: "automation"
   },
   {
-    id: 5,
-    title: "Technical Services",
-    description: "Technical development solutions from basic scripts to advanced application features.",
-    features: ["Web development", "Automation scripts", "API integration"],
-    icon: "💻",
-    category: "technical"
-  },
-  {
     id: 6,
     title: "Technical Writing",
     description: "Clear, accurate documentation that explains complex concepts in accessible language.",
@@ -154,6 +146,17 @@ const Services = () => {
           <Button className="btn-primary inline-flex items-center gap-2 bg-[#8E24AA] hover:bg-[#6A1B9A]">
             Schedule a Consultation <ArrowRight className="h-4 w-4" />
           </Button>
+        </div>
+        
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold text-center mb-12">Trusted by Innovative Companies</h3>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+            <a href="https://techandauthors.com/about-us/" target="_blank" rel="noopener noreferrer" className="text-gray-800 font-semibold text-xl hover:text-[#8E24AA] transition-colors">TECH AND AUTHORS</a>
+            <a href="#" className="text-gray-800 font-semibold text-xl hover:text-[#8E24AA] transition-colors">LAUE CONSULTING</a>
+            <a href="#" className="text-gray-800 font-semibold text-xl hover:text-[#8E24AA] transition-colors">FLOW FAMILY</a>
+            <a href="https://www.coinresearch.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-800 font-semibold text-xl hover:text-[#8E24AA] transition-colors">COIN RESEARCH</a>
+            <a href="https://app.lifeprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-gray-800 font-semibold text-xl hover:text-[#8E24AA] transition-colors">LIFE PROTOCOL</a>
+          </div>
         </div>
       </div>
     </section>
