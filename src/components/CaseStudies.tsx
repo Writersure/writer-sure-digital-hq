@@ -17,7 +17,7 @@ const caseStudies = [
     title: "E-commerce Brand Growth",
     category: "Content Strategy",
     description: "How our premium ghostwriting service helped an e-commerce brand increase organic traffic by 156% and boost conversions with strategic blog content.",
-    image: "/photo-1488590528505-98d2b5aba04b.jpg", 
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&q=80", 
     results: ["156% increase in organic traffic", "43% higher conversion rate", "68% increase in time-on-page"]
   },
   {
@@ -25,7 +25,7 @@ const caseStudies = [
     title: "Tech Startup Recognition",
     category: "Technical Writing",
     description: "Transforming complex technical content into accessible documentation that helped a SaaS startup secure additional funding and customer trust.",
-    image: "/photo-1518770660439-4636190af475.jpg",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80",
     results: ["Documentation clarity score improved by 87%", "Customer onboarding time reduced by 34%", "Helped secure $1.2M in additional funding"]
   },
   {
@@ -33,7 +33,7 @@ const caseStudies = [
     title: "Professional Service Firm",
     category: "Email Marketing",
     description: "Strategic email marketing campaign that revitalized client relationships and generated new business opportunities for a professional services firm.",
-    image: "/photo-1461749280684-dccba630e2f6.jpg", 
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80", 
     results: ["42% open rate (industry avg: 18%)", "22% response rate to cold outreach", "16 new client acquisitions"]
   }
 ];
