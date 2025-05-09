@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
-const caseStudies = [
+export const caseStudies = [
   {
     id: 1,
     title: "E-commerce Brand Growth",
@@ -42,12 +42,7 @@ const CaseStudies = () => {
   const navigate = useNavigate();
   
   const handleViewAllCaseStudies = () => {
-    // For now, this scrolls to the case studies section
-    // In the future, this could navigate to a dedicated case studies page
-    const caseStudiesSection = document.getElementById('case-studies');
-    if (caseStudiesSection) {
-      caseStudiesSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/case-studies');
   };
 
   return (
@@ -61,6 +56,12 @@ const CaseStudies = () => {
             Explore how our services have helped businesses like yours achieve their goals through
             strategic content creation and digital services.
           </p>
+          <Button 
+            onClick={handleViewAllCaseStudies}
+            className="bg-[#8E24AA] hover:bg-[#6A1B9A] text-white inline-flex items-center gap-2"
+          >
+            View All Case Studies <ArrowRight className="h-4 w-4" />
+          </Button>
         </div>
 
         {/* Mobile View: Carousel */}
@@ -95,7 +96,7 @@ const CaseStudies = () => {
                       <Button 
                         className="flex items-center justify-center gap-2 w-full mt-auto bg-white hover:bg-[#FFA726]/10 text-[#8E24AA] border border-[#8E24AA]/20" 
                         variant="outline"
-                        onClick={handleViewAllCaseStudies}
+                        onClick={() => navigate(`/case-study/${study.id}`)}
                       >
                         Read Full Case Study <ArrowRight className="h-4 w-4" />
                       </Button>
@@ -138,7 +139,7 @@ const CaseStudies = () => {
                 <Button 
                   className="flex items-center justify-center gap-2 w-full mt-auto bg-white hover:bg-[#FFA726]/10 text-[#8E24AA] border border-[#8E24AA]/20" 
                   variant="outline"
-                  onClick={handleViewAllCaseStudies}
+                  onClick={() => navigate(`/case-study/${study.id}`)}
                 >
                   Read Full Case Study <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -148,10 +149,8 @@ const CaseStudies = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Button className="inline-flex items-center gap-2 bg-[#8E24AA] hover:bg-[#6A1B9A] text-white" asChild>
-            <a href="#contact">
-              Discuss Your Project <ArrowRight className="h-4 w-4" />
-            </a>
+          <Button className="inline-flex items-center gap-2 bg-[#8E24AA] hover:bg-[#6A1B9A] text-white" onClick={() => navigate('/#contact')}>
+            Discuss Your Project <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </div>
