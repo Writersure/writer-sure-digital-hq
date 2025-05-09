@@ -217,8 +217,10 @@ const Contact = () => {
                 <p className="text-sm mb-3">
                   Book a free 30-minute consultation to discuss your project needs.
                 </p>
-                <Button className="w-full bg-[#FF7043] hover:bg-[#F4511E] text-white">
-                  Book a Call
+                <Button className="w-full bg-[#FF7043] hover:bg-[#F4511E] text-white" asChild>
+                  <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
+                    Book a Call
+                  </a>
                 </Button>
               </div>
             </div>

@@ -34,23 +34,26 @@ const Hero = () => {
               <div className="absolute -top-4 -right-4 bg-teal-500 text-white text-sm font-medium px-4 py-1 rounded-full">
                 Featured Service
               </div>
-              <h3 className="text-xl font-bold mb-4">Premium AI Ghostwriting</h3>
+              <h3 className="text-xl font-bold mb-4">Premium Ghostwriting</h3>
               <p className="text-gray-600 mb-6">
-                Our most popular service combines human expertise with AI capabilities to 
-                deliver high-quality, authentic content that sounds just like you.
+                Expert content creation that captures your authentic voice while maintaining the highest writing standards.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <span className="text-teal-500 font-bold mr-2">✓</span>
-                  <span>SEO-optimized content that ranks</span>
+                  <span>Blog posts & articles</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-500 font-bold mr-2">✓</span>
-                  <span>Human-reviewed for quality assurance</span>
+                  <span>Ebooks & guides</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-500 font-bold mr-2">✓</span>
-                  <span>Tailored to your unique brand voice</span>
+                  <span>Website copy</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-500 font-bold mr-2">✓</span>
+                  <span>LinkedIn & personal branding</span>
                 </li>
               </ul>
               <Button className="w-full bg-brand-800 hover:bg-brand-700 text-white" asChild>
@@ -67,8 +70,8 @@ const Hero = () => {
           <p className="text-gray-500 font-medium w-full mb-4">Trusted by innovative companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             <a href="https://techandauthors.com/about-us/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">TECH AND AUTHORS</a>
-            <a href="http://www.laue-consulting.de/index.html" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
-            <a href="https://www.flowffm.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
+            <a href="https://www.laue-consulting.de/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
+            <a href="https://www.flow-frankfurt.de/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
             <a href="https://www.coinresearch.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">COIN RESEARCH</a>
             <a href="https://app.lifeprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LIFE PROTOCOL</a>
           </div>
