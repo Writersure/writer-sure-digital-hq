@@ -89,9 +89,9 @@ const Index = () => {
         <About />
         <Process />
         <Testimonials />
-        <Newsletter />
         <FAQ />
         <Contact />
+        <Newsletter />
       </main>
       <Footer />
       <ScrollToTop />

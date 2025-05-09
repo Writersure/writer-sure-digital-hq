@@ -1,23 +1,8 @@
 
 import { Instagram, Mail, Phone, Twitter, MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { toast } = useToast();
-  const [email, setEmail] = useState("");
-  
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically integrate with your email service
-    toast({
-      title: "Subscription successful!",
-      description: "Thank you for subscribing to our newsletter.",
-    });
-    setEmail("");
-  };
   
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">      
