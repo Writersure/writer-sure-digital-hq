@@ -1,5 +1,5 @@
 
-import { Instagram, Mail, Phone, Twitter, WhatsApp } from "lucide-react";
+import { Instagram, Mail, Phone, Twitter, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -45,7 +45,7 @@ const Footer = () => {
                 <Phone className="h-5 w-5" />
               </a>
               <a href="https://wa.me/918297297307" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-teal-400 transition-colors" aria-label="WhatsApp">
-                <WhatsApp className="h-5 w-5" />
+                <MessageSquare className="h-5 w-5" />
               </a>
             </div>
           </div>

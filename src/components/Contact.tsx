@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageSquare, Phone, WhatsApp } from "lucide-react";
+import { Mail, MessageSquare, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const services = [
@@ -204,7 +204,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <WhatsApp className="h-5 w-5 mr-3 mt-1 text-[#FFA726]" />
+                  <MessageSquare className="h-5 w-5 mr-3 mt-1 text-[#FFA726]" />
                   <div>
                     <h4 className="font-medium mb-1">WhatsApp</h4>
                     <p>+91 8297297307</p>
