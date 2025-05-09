@@ -8,6 +8,7 @@ import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { initAnimateOnScroll } from "@/utils/animateOnScroll";
@@ -88,6 +89,7 @@ const Index = () => {
         <About />
         <Process />
         <Testimonials />
+        <Newsletter />
         <FAQ />
         <Contact />
       </main>

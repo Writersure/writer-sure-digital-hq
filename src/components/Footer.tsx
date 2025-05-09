@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white pt-12 pb-6">      
       {/* Main Footer - Simplified */}
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
               Writer<span className="text-teal-400">Sure</span>
@@ -80,32 +80,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </div>
-          
-          <div>
-            <h4 className="font-bold text-lg mb-3">Newsletter</h4>
-            <p className="text-sm text-gray-400 mb-3">
-              Subscribe for updates and industry insights.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                className="flex-grow px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:ring-1 focus:ring-white/30"
-                required
-              />
-              <Button 
-                type="submit"
-                className="bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 text-sm rounded-lg"
-              >
-                Subscribe
-              </Button>
-            </form>
-            <p className="text-xs text-gray-500 mt-2">
-              We respect your privacy. Unsubscribe anytime.
-            </p>
           </div>
         </div>
         

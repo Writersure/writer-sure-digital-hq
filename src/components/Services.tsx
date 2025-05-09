@@ -128,7 +128,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
-            <div key={service.id} className="service-card flex flex-col h-full transform hover:-translate-y-1 hover:border-[#FF7043]/20">
+            <div key={service.id} className="service-card flex flex-col h-full transform hover:-translate-y-1 hover:border-[#FF7043]/20 transition-all">
               <div className="text-3xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-bold mb-2 text-[#8E24AA]">{service.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>

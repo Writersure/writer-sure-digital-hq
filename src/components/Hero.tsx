@@ -67,8 +67,8 @@ const Hero = () => {
           <p className="text-gray-500 font-medium w-full mb-4">Trusted by innovative companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             <a href="https://techandauthors.com/about-us/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">TECH AND AUTHORS</a>
-            <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
-            <a href="#" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
+            <a href="http://www.laue-consulting.de/index.html" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LAUE CONSULTING</a>
+            <a href="https://www.flowffm.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">FLOW FAMILY</a>
             <a href="https://www.coinresearch.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">COIN RESEARCH</a>
             <a href="https://app.lifeprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-gray-600 font-semibold text-lg hover:text-[#8E24AA]">LIFE PROTOCOL</a>
           </div>
