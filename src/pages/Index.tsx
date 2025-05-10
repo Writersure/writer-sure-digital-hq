@@ -12,6 +12,7 @@ import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import CaseStudies from "@/components/CaseStudies";
+import HomeAdsPlacement from "@/components/HomeAdsPlacement";
 import { initAnimateOnScroll } from "@/utils/animateOnScroll";
 
 const Index = () => {
@@ -88,6 +89,7 @@ const Index = () => {
         <Hero />
         <Services />
         <About />
+        <HomeAdsPlacement /> {/* Added AdSense placement after About section */}
         <Process />
         <CaseStudies />
         <Testimonials />
