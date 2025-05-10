@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 interface AdSenseProps {
   adClient: string; // Your AdSense publisher ID
@@ -16,7 +16,6 @@ const AdSense = ({
   style = {}, 
   className = '' 
 }: AdSenseProps) => {
-  const adRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     try {
@@ -46,7 +45,6 @@ const AdSense = ({
         data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
-        ref={adRef}
       />
     </div>
   );

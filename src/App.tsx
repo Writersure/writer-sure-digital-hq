@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,7 +17,7 @@ const App = () => {
     try {
       if (window.adsbygoogle && process.env.NODE_ENV === 'production') {
         window.adsbygoogle.push({
-          google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX", // Replace with your actual AdSense publisher ID
+          google_ad_client: "ca-pub-1881408608042193", // Updated AdSense publisher ID
         });
       }
     } catch (error) {
